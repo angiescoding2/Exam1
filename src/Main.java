@@ -24,7 +24,29 @@ public class Main {
                 int balance = scanner.nextInt();
                 scanner.nextLine();
                 register.createAccount(name, balance);
+                System.out.println("Kontot skapat.");
+            } else if (choice == 2) {
+                register.printAll();
+            } else if (choice == 3) {
+                System.out.print("Namn: ");
+                String name = scanner.nextLine();
+                Account found = register.findAccount(name);
+                if (found != null) {
+                    System.out.print("Belopp: ");
+                    int amount = scanner.nextInt();
+                    scanner.nextLine();
+                    found.deposit(amount);
+                    System.out.println("Nytt saldo: " + found.getBalance());
+                } else {
+                    System.out.println("Konto saknas:" + name);
+                }
+                } else if (choice == 4) {
+                    System.out.println("Hej då");
+                } else {
+                    System.out.println("Ogiltigt val.");
+                }
+
+                }
+
             }
         }
-    }
-}
