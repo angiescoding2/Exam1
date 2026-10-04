@@ -18,4 +18,11 @@ public class Account {
     public void deposit(int amount) {
         balance += amount;
     }
+    public void withdraw(int amount) {
+        if (amount > this.balance) {
+            System.out.println("Uttag medges ej — beloppet är större än saldot.");
+        } else {
+            this.balance = this.balance - amount;
+        }
+    }
 }
