@@ -59,7 +59,7 @@ public class Main {
                 }
 
             } else if (choice == 5) {
-                System.out.println("Avsluta");
+                System.out.println("Hej då! Välkommen åter.");
             } else {
                 System.out.println("Ogiltigt val.");
             }
