@@ -4,6 +4,14 @@ public class Main {
     public static void main(String[] args) {
         AccountRegister register = new AccountRegister();
 
+        SavingsAccount savings = new SavingsAccount("Angie", 1000, 5);
+
+        System.out.println("Sparkonto före ränta: " + savings.getBalance());
+
+        savings.applyInterest();
+
+        System.out.println("Sparkonto efter ränta: " + savings.getBalance());
+
         Scanner scanner = new Scanner(System.in);
         int choice = 0;
 
