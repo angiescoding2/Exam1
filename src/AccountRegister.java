@@ -8,6 +8,12 @@ public class AccountRegister {
         Account account = new Account(name, balance);
         accounts.add(account);
     }
+
+    public SavingsAccount createSavingsAccount(String name, int balance, int interestRate) {
+        SavingsAccount created = new SavingsAccount(name, balance, interestRate);
+        accounts.add(created);
+        return created;
+    }
     public void printAll() {
         for (int i = 0; i < accounts.size(); i++) {
             Account a = accounts.get(i);
