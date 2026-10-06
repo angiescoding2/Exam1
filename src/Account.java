@@ -15,6 +15,10 @@ public class Account {
         return balance;
     }
 
+    public void printInfo() {
+        System.out.println("Konto: " + name + " | Saldo: " + balance);
+    }
+
     public void deposit(int amount) {
         balance += amount;
     }
