@@ -15,7 +15,7 @@ public class SavingsAccount extends Account {
         deposit(interest);
         System.out.println("Nytt saldo: " + getBalance() + " kr");
     }
-    //Metod 3
+
         @Override
         public void printInfo() {
             super.printInfo();

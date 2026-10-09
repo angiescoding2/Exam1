@@ -4,7 +4,7 @@ import java.util.List;
 public class AccountRegister {
     private List<Account> accounts = new ArrayList<>();
 
-    //Metod 2
+
     public void createAccount(String name, int balance) {
         Account account = new Account(name, balance);
         accounts.add(account);

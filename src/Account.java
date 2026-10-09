@@ -22,7 +22,7 @@ public class Account {
     public void deposit(int amount) {
         balance += amount;
     }
-    //Metod 1
+
     public void withdraw(int amount) {
         if (amount > this.balance) {
             System.out.println("Uttag medges ej — beloppet är större än saldot.");
