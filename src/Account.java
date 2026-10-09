@@ -22,11 +22,15 @@ public class Account {
     public void deposit(int amount) {
         balance += amount;
     }
+    //Metod 1
     public void withdraw(int amount) {
         if (amount > this.balance) {
             System.out.println("Uttag medges ej — beloppet är större än saldot.");
         } else {
             this.balance = this.balance - amount;
         }
+    }
+    public void applyInterest() {
+        System.out.println("Det här kontot har ingen ränta.");
     }
 }

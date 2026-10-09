@@ -7,14 +7,15 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         int choice = 0;
 
-        while (choice != 6) {
+        while (choice != 7) {
             System.out.println();
             System.out.println("1. Skapa konto");
             System.out.println("2. Skapa sparkonto");
             System.out.println("3. Lista alla");
             System.out.println("4. Sätt in pengar");
             System.out.println("5. Ta ut pengar");
-            System.out.println("6. Avsluta");
+            System.out.println("6. Lägg till ränta på sparkonto");
+            System.out.println("7. Avsluta");
             System.out.print("Val: ");
             choice = scanner.nextInt();
             scanner.nextLine();
@@ -76,6 +77,17 @@ public class Main {
                 }
 
             } else if (choice == 6) {
+                System.out.print("Ange kontonamn: ");
+                String name = scanner.nextLine();
+                Account found = register.findAccount(name);
+
+                if (found != null) {
+                    found.applyInterest();
+                } else {
+                    System.out.println("Kontot hittades inte.");
+                }
+
+            } else if (choice == 7) {
                 System.out.println("Hej då! Välkommen åter.");
             } else {
                 System.out.println("Ogiltigt val.");
